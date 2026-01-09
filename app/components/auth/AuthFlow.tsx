@@ -22,7 +22,6 @@ export default function AuthFlow() {
         newOtp[index] = value;
         setOtp(newOtp);
 
-        // Auto focus next input
         if (value && index < 3) {
             const nextInput = document.getElementById(`otp-${index + 1}`);
             nextInput?.focus();
@@ -46,11 +45,11 @@ export default function AuthFlow() {
 
     return (
         <div className=" w-full min-h-screen flex items-center justify-center p-4 md:p-6">
-            {/* Main Card */}
+
             <div className="w-full overflow-hidden min-h-[90vh] md:h-[94vh] grid grid-cols-1 lg:grid-cols-2">
-                {/* Left Illustration Section */}
+
                 <div className="relative bg-[#DDDCE9] rounded-xl shadow-lg p-6 md:p-10 hidden lg:flex flex-col justify-between">
-                    {/* Illustration Placeholder */}
+
                     <div className="flex items-end justify-center flex-1">
                         <div className="w-full h-full lg:h-[50vh] rounded-2xl flex items-center justify-center text-gray-400">
                             <Items active={active}></Items>
@@ -66,14 +65,14 @@ export default function AuthFlow() {
                         </p>
                     </div>
 
-                    {/* Pagination Dots */}
+
                     <div className="flex justify-center items-center gap-2 mt-6 mb-4">
                         <span className="h-2 w-2 rounded-full bg-gray-300" />
                         <span className="h-2 w-2 rounded-full bg-[#432C81]" />
                         <span className="h-2 w-2 rounded-full bg-gray-300" />
                     </div>
 
-                    {/* Slider Controls */}
+
                     <div className="flex justify-center gap-3 mt-12 mb-6">
                         <button className="h-12 w-12 rounded bg-white shadow flex items-center justify-center">
                             <ArrowLeft size={28} />
@@ -84,16 +83,16 @@ export default function AuthFlow() {
                     </div>
                 </div>
 
-                {/* Right Form Section */}
+
                 {active === "signin" && <div className="p-6 md:p-10 lg:p-20 flex flex-col justify-center bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
+
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Let’s Sign In.
@@ -103,9 +102,9 @@ export default function AuthFlow() {
                         </p>
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-5">
-                        {/* Email */}
+
                         <div className="space-y-1 ">
                             <label className="text-md font-medium text-gray-700">
                                 Email Address
@@ -122,7 +121,7 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Password */}
+
                         <div className="space-y-2">
                             <label className="text-md font-medium  text-gray-700">
                                 Password
@@ -154,7 +153,7 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Sign In Button */}
+
                         <button onClick={() => {
                             console.log({ email, password });
                             router.push("/dashboard");
@@ -178,12 +177,12 @@ export default function AuthFlow() {
 
                     </div>
 
-                    {/* Divider */}
+
                     <div className="my-12">
                         <div className="w-full h-px bg-[#dadadaee]" />
                     </div>
 
-                    {/* Social Login */}
+
                     <div className="flex w-full justify-center items-center gap-2">
                         <button onClick={() => router.push("/dashboard")} className="flex-1 max-w-42 w-42 py-3 rounded-md  bg-[#F3F4F6] border-gray-300 flex items-center justify-center font-medium cursor-pointer">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +208,7 @@ export default function AuthFlow() {
                         </button>
                     </div>
 
-                    {/* Footer */}
+
                     <p className="text-sm text-gray-600 text-center mt-6">
                         Don’t have an account?{" "}
                         <span onClick={() => setActive("signup")} className="text-[#432C81] font-medium cursor-pointer hover:underline">
@@ -217,16 +216,16 @@ export default function AuthFlow() {
                         </span>
                     </p>
                 </div>}
-                {/* Right Form Section */}
+
                 {active === "signup" && <div className="p-6 md:p-10 lg:p-20 flex flex-col justify-center bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
+
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Sign Up For Free.
@@ -236,9 +235,9 @@ export default function AuthFlow() {
                         </p>
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-5">
-                        {/* Email */}
+
                         <div className="space-y-1 ">
                             <label className="text-md font-medium text-gray-700">
                                 Email Address
@@ -255,7 +254,7 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Password */}
+
                         <div className="space-y-2">
                             <label className="text-md font-medium  text-gray-700">
                                 Password
@@ -282,7 +281,7 @@ export default function AuthFlow() {
                             </div>
 
                         </div>
-                        {/* CNPassword */}
+
                         <div className="space-y-2">
                             <label className="text-md font-medium  text-gray-700">
                                 Confirm Password
@@ -310,7 +309,6 @@ export default function AuthFlow() {
 
                         </div>
 
-                        {/* Sign up Button */}
                         <button onClick={() => {
                             console.log({ email, password, confirmPassword });
                             router.push("/dashboard");
@@ -334,12 +332,11 @@ export default function AuthFlow() {
 
                     </div>
 
-                    {/* Divider */}
+
                     <div className="mt-12">
                         <div className="w-full h-px bg-[#dadadaee]" />
                     </div>
 
-                    {/* Footer */}
                     <p className="text-sm text-gray-600 text-center mt-6">
                         Already have an account? {" "}
                         <span onClick={() => setActive("signin")} className="text-[#432C81] font-medium cursor-pointer hover:underline">
@@ -348,16 +345,16 @@ export default function AuthFlow() {
                     </p>
                 </div>}
 
-                {/* Right Form Section */}
+
                 {active === "forgot" && <div className="p-6 md:p-10 lg:p-20 flex flex-col justify-center bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
+
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Forgot Password
@@ -367,9 +364,9 @@ export default function AuthFlow() {
                         </p>
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-5">
-                        {/* Email */}
+
                         <div className="space-y-1 ">
                             <label className="text-md font-medium text-gray-700">
                                 Email Address
@@ -386,7 +383,6 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Sign In Button */}
                         <button onClick={() => setActive("otp")} className="w-full py-3 mt-12 rounded-md cursor-pointer bg-[#432C81] text-white font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 Continue
@@ -404,7 +400,7 @@ export default function AuthFlow() {
                                 </svg>
                             </div>
                         </button>
-                        {/* Sign In Button */}
+
                         <button onClick={() => setActive("signin")} className="w-full py-3 rounded-md cursor-pointer bg-white text-[#6B7280] border border-[#6B7280]  font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 <svg width="18"
@@ -417,16 +413,15 @@ export default function AuthFlow() {
 
                     </div>
                 </div>}
-                {/* Right Form Section Otp */}
+
                 {active === "otp" && <div className="p-6 md:p-10 lg:p-28 flex flex-col justify-center bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             OTP Confirmation 🔑
@@ -436,9 +431,8 @@ export default function AuthFlow() {
                         </p>
                     </div>
 
-                    {/* Form */}
                     <div className="space-y-5">
-                        {/* OTP Inputs */}
+
                         <div className="flex gap-4 justify-start mb-8">
                             {[0, 1, 2, 3].map((i) => (
                                 <input
@@ -453,7 +447,7 @@ export default function AuthFlow() {
                             ))}
                         </div>
 
-                        {/* Sign In Button */}
+
                         <button onClick={() => setActive("password")} className="w-full py-3 mt-12 rounded-md cursor-pointer bg-[#432C81] text-white font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 Continue
@@ -471,7 +465,7 @@ export default function AuthFlow() {
                                 </svg>
                             </div>
                         </button>
-                        {/* Sign In Button */}
+
                         <button onClick={() => setActive("forgot")} className="w-full py-3 rounded-md cursor-pointer bg-white text-[#6B7280] border border-[#6B7280]  font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 <svg width="18"
@@ -485,16 +479,16 @@ export default function AuthFlow() {
 
                     </div>
                 </div>}
-                {/* Right Form Section */}
+
                 {active === "password" && <div className="p-6 md:p-10 lg:p-20 flex flex-col justify-center bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
+
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Let’s Set Up Your Password. 🔑
@@ -502,9 +496,9 @@ export default function AuthFlow() {
 
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-5">
-                        {/* Email */}
+
                         <div className="space-y-1 ">
                             <div className="relative">
                                 <input
@@ -523,7 +517,7 @@ export default function AuthFlow() {
                                 </button>
                             </div>
 
-                            {/* Strength bar */}
+
                             <div className="h-1.5 w-full rounded-full bg-gray-200 overflow-hidden mt-6">
                                 <div className={`h-full transition-all duration-300 ${strengthColor}`} style={{ width: `${strength}%` }} />
                             </div>
@@ -531,7 +525,7 @@ export default function AuthFlow() {
                         <p className="text-md text-[#4B5563]  mt-1">
                             {strengthText} password! {strength < 100 && "Kindly increase strength!"} 💪
                         </p>
-                        {/* Sign In Button */}
+
                         <button onClick={() => setActive("gohome")} className="w-full py-3 mt-12 rounded-md cursor-pointer bg-[#6B7280] text-white font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 Continue
@@ -549,7 +543,7 @@ export default function AuthFlow() {
                                 </svg>
                             </div>
                         </button>
-                        {/* Sign In Button */}
+
                         <button onClick={() => setActive("otp")} className="w-full py-3 rounded-md cursor-pointer bg-white text-[#6B7280] border border-[#6B7280]  font-semibold hover:opacity-90 transition flex items-center justify-center">
                             <div className="flex items-center gap-2">
                                 <svg width="18"
@@ -562,25 +556,24 @@ export default function AuthFlow() {
 
                     </div>
                 </div>}
-                {/* Right Form Section */}
+
                 {active === "gohome" && <div className="p-6 md:p-10 lg:p-20 flex flex-col bg-white rounded-xl lg:rounded-none shadow-lg lg:shadow-none">
-                    {/* Logo */}
+
                     <div className="mb-10">
                         <div className="inline-flex items-center justify-center px-10 py-2 bg-black text-white rounded text-lg font-semibold">
                             Logo
                         </div>
                     </div>
 
-                    {/* Heading */}
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Password Resetted! 🔐
                         </h1>
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-5">
-                        {/* Email */}
+
                         <p className="text-2xl max-w-96 w-96 text-gray-600  mt-1">
                             We’ve sent the password to **221b@gmail.com. Resend if the password is not received! 🔥
                         </p>
@@ -605,7 +598,6 @@ export default function AuthFlow() {
                     </div>
                 </div>}
 
-                {/* Right Form Section */}
                 {active === "profile" && <div className="p-6 pl-20 pr-20 flex flex-col justify-center ">
                     {/* Logo */}
                     <div className="mb-10">
@@ -615,14 +607,13 @@ export default function AuthFlow() {
                     </div>
 
 
-                    {/* Heading */}
 
                     <div className="mb-10">
                         <h1 className="text-2xl font-medium  text-[#2D2A4A]">
                             Profile Setup
                         </h1>
                     </div>
-                    {/* Avatar */}
+
                     <div className=" flex relative justify-center mb-6 md:mb-8">
                         <svg width="113" height="115" viewBox="0 0 113 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.171638 83.0861C0.114427 82.9907 0.057211 82.8954 0 82.8C6.59833 79.8437 13.4255 77.7075 19.8331 75.8574C21.4541 75.3996 23.1705 74.9228 24.9821 74.465C27.5566 73.8166 30.3409 73.1681 33.2586 72.5768C35.9285 72.0237 38.7128 71.5087 41.5924 71.0509C46.379 70.2689 51.4327 69.6395 56.6007 69.2008C57.3254 69.1436 58.0501 69.0864 58.7747 69.0292C59.7664 68.9529 60.739 68.8957 61.7306 68.8575C75.0417 68.1709 88.8296 69.0483 100.825 72.8438C105.459 74.3125 109.159 76.7729 112.229 80.0535C112.21 80.1107 112.172 80.1679 112.134 80.2251C111.638 81.1788 111.123 82.1134 110.57 83.048C110.322 83.4676 110.074 83.9063 109.807 84.3259C109.673 84.5547 109.54 84.7645 109.387 84.9934C109.311 85.1269 109.216 85.2604 109.12 85.394C108.911 85.7373 108.682 86.0615 108.453 86.4048C107.824 87.3394 107.156 88.274 106.47 89.1705C106.451 89.2086 106.431 89.2277 106.393 89.2658C106.241 89.4566 106.107 89.6473 105.955 89.838C105.325 90.6582 104.677 91.4592 104.01 92.2412C103.666 92.6227 103.342 93.0232 102.98 93.4047C102.865 93.5382 102.732 93.6717 102.617 93.8243C102.255 94.2058 101.893 94.6063 101.53 94.9878C101.321 95.1976 101.13 95.4074 100.92 95.6172C100.462 96.0749 100.005 96.5327 99.5471 96.9714C98.7461 97.7343 97.9261 98.4782 97.087 99.2029C97.0298 99.2602 96.9726 99.2983 96.9154 99.3555C96.0191 100.138 95.0846 100.881 94.1311 101.606C93.8451 101.816 93.5781 102.026 93.292 102.236C92.5292 102.808 91.7473 103.342 90.9464 103.876C89.5924 104.791 88.2003 105.65 86.7891 106.451C86.5411 106.584 86.3123 106.718 86.0644 106.851C85.702 107.061 85.3397 107.252 84.9583 107.443C84.8439 107.5 84.7295 107.557 84.615 107.614C84.1764 107.843 83.7569 108.053 83.3182 108.263C83.0513 108.396 82.7843 108.511 82.5173 108.644C81.7736 108.987 81.0298 109.331 80.267 109.655C79.7521 109.865 79.2372 110.075 78.7223 110.284C78.7032 110.284 78.6842 110.304 78.6651 110.304C78.4744 110.38 78.2837 110.456 78.093 110.532C78.0358 110.551 77.9786 110.571 77.9213 110.59C77.4827 110.761 77.0441 110.914 76.6246 111.066C75.5185 111.448 74.4124 111.81 73.2873 112.135C73.0393 112.211 72.8105 112.268 72.5626 112.344C72.5435 112.344 72.5435 112.344 72.5244 112.344C71.5328 112.611 70.5411 112.878 69.5304 113.107C68.882 113.26 68.2146 113.393 67.5471 113.527C67.261 113.584 66.994 113.641 66.708 113.679C66.4982 113.718 66.3075 113.756 66.0977 113.775C65.354 113.908 64.6293 114.023 63.8856 114.118C63.4279 114.175 62.9702 114.233 62.5316 114.29C62.5125 114.29 62.5125 114.29 62.4935 114.29C62.2265 114.328 61.9595 114.347 61.6925 114.366C61.4255 114.385 61.1585 114.423 60.9106 114.442C60.7199 114.461 60.5483 114.481 60.3576 114.481C59.919 114.519 59.4613 114.538 59.0227 114.576C57.8022 114.652 56.5817 114.671 55.3421 114.671C54.9416 114.671 54.5221 114.671 54.1216 114.652C53.7592 114.652 53.3969 114.633 53.0536 114.614C52.9202 114.614 52.7676 114.595 52.6341 114.595C51.8522 114.557 51.0703 114.519 50.2884 114.461C49.6401 114.404 49.0107 114.347 48.3814 114.29C47.4088 114.194 46.4553 114.061 45.5018 113.908C43.8045 113.641 42.1073 113.317 40.4672 112.917C38.77 112.516 37.0918 112.039 35.4517 111.505C35.3564 111.486 35.2801 111.448 35.1848 111.41C34.0787 111.047 33.0107 110.647 31.9428 110.227C31.8284 110.189 31.733 110.132 31.6186 110.094C31.5995 110.075 31.5614 110.075 31.5423 110.056C30.7223 109.731 29.9213 109.388 29.1204 109.026C28.6627 108.816 28.1859 108.606 27.7282 108.377C27.4803 108.263 27.2133 108.129 26.9654 108.015C26.9464 108.015 26.9464 108.015 26.9273 107.996C26.6603 107.862 26.3933 107.729 26.1454 107.595C26.0691 107.557 26.0119 107.519 25.9547 107.5C25.0775 107.042 24.2002 106.565 23.3421 106.069C22.7509 105.726 22.1597 105.383 21.5876 105.02C21.5304 104.982 21.4732 104.944 21.416 104.906C21.2634 104.81 21.1109 104.715 20.9583 104.62C19.8904 103.933 18.8415 103.227 17.8308 102.484C17.4303 102.197 17.0489 101.911 16.6675 101.625C15.9809 101.11 15.3135 100.576 14.6651 100.023C14.0739 99.5272 13.4827 99.0313 12.9106 98.5163C12.3576 98.0204 11.8045 97.5245 11.2706 97.0095C11.1943 96.9332 11.0989 96.8569 11.0226 96.7806C11.0036 96.7616 10.9654 96.7234 10.9464 96.7044C10.0119 95.8079 9.11562 94.8924 8.23838 93.9387C8.18117 93.8815 8.10489 93.8052 8.04768 93.7289C7.91419 93.5763 7.7807 93.4428 7.64721 93.2903C7.49464 93.1186 7.36114 92.966 7.20858 92.7944C6.90346 92.451 6.59833 92.0886 6.29321 91.7262C6.1025 91.4974 5.9118 91.2685 5.7211 91.0396C5.12992 90.3148 4.57688 89.5901 4.02385 88.8653C3.50895 88.1786 3.01311 87.4729 2.51729 86.7672C1.69726 85.5656 0.91538 84.3259 0.171638 83.0861Z" fill="#9CA3AF" />
@@ -666,9 +657,9 @@ export default function AuthFlow() {
 
                     </div>
 
-                    {/* Form */}
+
                     <div className="space-y-4 md:space-y-5">
-                        {/* Name */}
+
                         <div className="space-y-1">
                             <label className="text-md font-medium text-gray-700">Name</label>
                             <div className="relative">
@@ -681,7 +672,7 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Phone */}
+
                         <div className="space-y-1">
                             <label className="text-md font-medium text-gray-700">Phone number</label>
                             <div className="relative">
@@ -694,7 +685,7 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Gender */}
+
                         <div className="space-y-1">
                             <label className="text-md font-medium text-gray-700">Gender</label>
                             <div className="relative">
@@ -708,9 +699,9 @@ export default function AuthFlow() {
                             </div>
                         </div>
 
-                        {/* Buttons container */}
+
                         <div className="flex flex-col gap-3 pt-2">
-                            {/* Complete Button */}
+
                             <button onClick={() => router.push("/dashboard")} className="w-full py-3 mt-12 rounded-md cursor-pointer  text-white font-semibold hover:opacity-90 transition flex items-center justify-center bg-[#432C81]">
                                 <div className="flex items-center gap-2">
                                     Complete Profile
@@ -728,7 +719,6 @@ export default function AuthFlow() {
                                     </svg>
                                 </div>
                             </button>
-                            {/* Skip */}
                             <button onClick={() => setActive("forgot")} className="w-full py-3 rounded-md cursor-pointer bg-white text-[#6B7280] border border-[#6B7280]  font-semibold hover:opacity-90 transition flex items-center justify-center">
                                 <div className="flex items-center gap-2">
                                     Skip
