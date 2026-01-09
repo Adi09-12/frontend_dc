@@ -1,10 +1,6 @@
 import React from "react";
 import {
-    MapPin,
     Star,
-    ChevronRight,
-    Filter,
-    CheckCircle2,
     CalendarDays,
 } from "lucide-react";
 
@@ -97,7 +93,7 @@ export function Dashboard() {
                                     <CalendarDays size={16} /> JUN 25, 2025
                                 </div>
                             </div>
-                            {/* Specializations */}
+
                             <div>
                                 <h2 className="text-xl font-semibold mb-4">Select by Specializations</h2>
                                 <div className="flex gap-6 overflow-x-auto">
